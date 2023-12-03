@@ -72,13 +72,13 @@ for y in range(height):
             digits.append(n)
             coords.append([x,y])
         else:
-            add_if_adj(digits,coords, engine, d)
+            add_if_adj(digits, coords, engine, d)
             digits,coords= [],[]
-    add_if_adj(digits,coords, engine, d)
+    add_if_adj(digits, coords, engine, d)
     digits,coords= [],[]
         
-add_if_adj(digits,coords, engine, d)
+add_if_adj(digits, coords, engine, d)
 
-print("solution 2", sum([math.prod(value) for key, value in d.items() if len(value) == 2]))
+print("solution 2", sum([math.prod(value) for value in d.values() if len(value) == 2]))
         
     
